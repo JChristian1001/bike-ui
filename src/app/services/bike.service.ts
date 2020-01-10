@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Httpclient, HttpHeaders} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 const httpOptions = {
     headers: new HttpHeaders({'Content-type': 'application/json'})
@@ -10,7 +10,7 @@ const httpOptions = {
 })
 export class BikeService {
 
-  constructor(private http: Httpclient) {}
+  constructor(private http: HttpClient) {}
 
   getBikes() {
     return this.http.get('/server/api/v1/bikes');
